@@ -1,0 +1,17 @@
+display:flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 100%;
+        >.photo
+        {
+          margin: 2px;
+          height: 20px;
+          width: 30%;
+          height: 10rem;
+          flex-grow: 1;
+          @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+              background-color: nth($photos-colors, $i);
+            }
+          }
+        }
